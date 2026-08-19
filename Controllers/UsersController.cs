@@ -4,6 +4,8 @@ using UserManager.Data;
 using UserManager.Models;
 using UserManager.DTOs;
 
+// Github Updating: 1-git add . 2-git commit -m "..." 3-git push
+
 namespace UserManager.Controllers
 {
     [ApiController]

@@ -27,7 +27,7 @@ namespace UserManager.Controllers
 
             if (age.HasValue)
             {
-                query = query.Where(u => u.Age == age.Value);
+                query = query.Where(u => u.Name.Contains(name));
             }
 
             if (!string.IsNullOrEmpty(name))

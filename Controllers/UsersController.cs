@@ -1,10 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UserManager.Data;
 using UserManager.Models;
 using UserManager.DTOs;
 
-// Github Updating: 1-git add . 2-git commit -m "..." 3-git push
+//git add .; git commit -m "توضیح تغییر"; git push
 
 namespace UserManager.Controllers
 {
@@ -27,12 +27,12 @@ namespace UserManager.Controllers
 
             if (age.HasValue)
             {
-                query = query.Where(u => u.Name.Contains(name));
+                query = query.Where(u => u.Age == age.Value);
             }
 
             if (!string.IsNullOrEmpty(name))
             {
-                query = query.Where(u => u.Name == name);
+                query = query.Where(u => u.Name.Contains(name));
             }
 
             var users = await query.ToListAsync();

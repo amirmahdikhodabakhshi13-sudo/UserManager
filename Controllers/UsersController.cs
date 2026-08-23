@@ -4,7 +4,7 @@ using UserManager.Data;
 using UserManager.Models;
 using UserManager.DTOs;
 
-//git add .; git commit -m "توضیح تغییر"; git push
+//git add .; git commit -m "..."; git push
 
 namespace UserManager.Controllers
 {
@@ -84,6 +84,7 @@ namespace UserManager.Controllers
             [FromBody] UpdateUserDto userDto)
         {
             var existingUser = await _context.Users
+
                 .FirstOrDefaultAsync(u => u.Id == id);
 
             if (existingUser == null)

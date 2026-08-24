@@ -14,10 +14,7 @@ namespace UserManager.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public UsersController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        public UsersController(ApplicationDbContext context) => _context = context;  //Constructor
 
         // GET: api/Users
         [HttpGet]
